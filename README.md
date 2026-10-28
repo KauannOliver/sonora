@@ -49,3 +49,7 @@ Original application code is available under the [MIT license](LICENSE). Third-p
 ## Verification record
 
 See [snapshot checks and remaining limitations](docs/VERIFICATION.md).
+
+## Architecture
+
+[Component boundaries, credentials and local operation](docs/ARCHITECTURE.md).
