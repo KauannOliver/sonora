@@ -17,3 +17,18 @@ Python application files passed syntax parsing. This does not execute imports, l
 - No deployment command, deploy workflow or new hosting integration is part of this update. Included Vercel configurations disable Git-driven deployments.
 - New source imports exclude local environments, databases, generated outputs and operational documents.
 - Existing Git history is preserved. Historical public names or assets may remain in old commits; current snapshots use neutral public presentation.
+
+## Production npm dependency audit — sonora
+
+`npm audit --omit=dev --json` reported 0 critical, 1 high, 1 moderate, 0 low findings in the installed dependency tree on 2026-10-28. Counts include transitive packages and do not establish exploitability in this application.
+
+| Package | Severity | Direct dependency |
+| --- | --- | --- |
+| `next` | moderate | Yes |
+| `postcss` | high | No |
+
+These advisories remain a maintenance item. This documentation/publication task did not perform dependency upgrades or validate a production security posture.
+
+## Credential fallback regression checks
+
+The server now obtains defaults only from runtime environment variables. No encoded or split credential fallback is distributed. After this change, type checking, the production build and three credential-configuration regression tests passed. Missing configuration returns no default key. No provider request was made.

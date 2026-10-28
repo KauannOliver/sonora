@@ -2,12 +2,13 @@
   "name": "vozia-studio",
   "version": "1.0.0",
   "private": true,
-  "description": "VozIA Studio — estúdio 2 em 1: Texto → Voz (ElevenLabs) e Voz → Texto (Groq Whisper).",
+  "description": "VozIA Studio \u2014 est\u00fadio 2 em 1: Texto \u2192 Voz (ElevenLabs) e Voz \u2192 Texto (Groq Whisper).",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.cjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",
